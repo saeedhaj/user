@@ -1,29 +1,34 @@
 <div class="header d-flex justify-content-between">
     <h1>List rouls</h1>
-    <button class="btn btn-primary" (click)="clickMe()" type="button ">save</button>
+    <div>
+        <button *ngIf="isAddingRoles" class="btn btn-primary" (click)="onSaveClick()" type="button ">save</button>
+        <button *ngIf="!isAddingRoles" class="btn btn-primary" (click)="onCreateNewRolesClick()" type="button ">CreateNewUser</button>
+        <button *ngIf="isAddingRoles" class="btn btn-primary" (click)="onCreateNewRolesCancelClick()" type="button ">cancel</button>
+    </div>
+
+
 </div>
 
 <div class="container">
+    <h1 *ngFor="let item of roles">saeedddfgds </h1>
     <div class="row">
         <div class="col-7">
             <table class="table">
                 <caption>List of users</caption>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">mobail</th>
-                </tr>
-                <tr [routerLink]="['/home/rouls/add-role']" routerLinkActive="router-link-active">
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>02313554</td>
-                </tr>
+                    <th scope="col">name</th>
+                    <th scope="col">desc</th>
+
+                    <tr [routerLink]="['/home/rouls/add-role']" routerLinkActive="router-link-active" *ngFor="let role of roles">
+                        <th scope="row">1</th>
+                        <td>{{role.name}}</td>
+                        <td>{{role.desc}}</td>
+                    </tr>
             </table>
 
         </div>
-        <div class="col-5">
+        <div class="col-5" *ngIf="isAddingRoles">
             <div class="form-group">
                 <label>Name</label>
                 <input [(ngModel)]="name" type="text" class="form-control">
@@ -32,6 +37,7 @@
                 <label>Description</label>
                 <textarea class="form-control" [(ngModel)]="desc" rows="3"></textarea>
             </div>
+
         </div>
     </div>
 </div>
