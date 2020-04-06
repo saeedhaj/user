@@ -1,0 +1,17 @@
+.container-fluid {
+    background-color: grey;
+    height: 100%;
+    .row {
+        background-color: white;
+        width: 65%;
+        border: 1px solid #ebebeb;
+        border-radius: 4px;
+    }
+    .register-section {
+        background-color: white;
+    }
+    .login-section {
+        background-color: #20a8d8;
+        color: white;
+    }
+}

@@ -1,0 +1,5 @@
+@mixin hStyle($color, $myFontWeight) {
+    font-weight: $myFontWeight;
+    color: $color;
+    text-align: center;
+}

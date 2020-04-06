@@ -1,0 +1,53 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+.mohammad {
+    width: $page-width;
+    .haji {
+        text-align: center;
+        .my-paragraph {
+            color: rgb(180, 22, 22);
+        }
+        h1 {
+            @include hStyle(yellow, 400);
+            &:hover {
+                color: blue;
+            }
+            &.h1Mohammad {
+                color: $my-yellow;
+            }
+            &#x {
+                color: blue;
+            }
+        }
+    }
+    .saeed {
+        text-align: center;
+        h2 {
+            @include hStyle(red, 100);
+        }
+    }
+    form {
+        input {
+            @include hStyle(green, 400);
+            border: none;
+            border-bottom: 1px solid #ebebeb;
+            &:hover {
+                height: $page-width;
+            }
+        }
+    }
+}
+
+button {
+    color: red;
+}
+
+.ali {
+    button {
+        color: $my-yellow;
+    }
+    h3 {
+        @include hStyle(blue, 200);
+        border: 1px solid #000;
+    }
+}
