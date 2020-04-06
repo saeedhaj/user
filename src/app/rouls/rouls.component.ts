@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rouls.component.scss']
 })
 export class RoulsComponent implements OnInit {
-
+  name: string;
+  desc: string;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  clickMe() {
+console.log(`${this.name} ${this.desc}`)
+  }
 }
