@@ -1,3 +1,4 @@
+<router-outlet></router-outlet>
 <div class="header d-flex justify-content-between p-2 w-100">
     <h1>List all users</h1>
     <button (click)="save()" type="button" class="btn btn-primary">Save</button>
@@ -15,7 +16,7 @@
                     <th scope="col">phone</th>
                     <th scope="col">mobail</th>
                 </tr>
-                <tr>
+                <tr [routerLink]="['/home/user/user-detail']" routerLinkActive="router-link-active">
                     <th scope="row">1</th>
                     <td>Mark</td>
                     <td>Otto</td>
