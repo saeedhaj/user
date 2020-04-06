@@ -18,12 +18,8 @@ const routes: Routes = [
     loadChildren: () => import("./registor/registor.module").then(m => m.RegistorModule)
   },
   {
-    path: 'user',
-    loadChildren: () => import("./user/user.module").then(m => m.UserModule)
-  },
-  {
-    path: 'rouls',
-    loadChildren: () => import("./rouls/rouls.module").then(m => m.RoulsModule)
+      path: 'home',
+      loadChildren:()=>import("./home/home.module").then(m=>m.HomeModule)
   }
 ];
 

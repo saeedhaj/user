@@ -1,23 +1,20 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active">login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/register']" routerLinkActive="router-link-active">register</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/user']" routerLinkActive="router-link-active">user</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/rouls']" routerLinkActive="router-link-active">rolus</a>
-            </li>
+    <a class="navbar-brand" href="#">Navbar</a>
 
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/home/user']" routerLinkActive="router-link-active">user</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/home/rouls']" routerLinkActive="router-link-active">rolus</a>
+            </li>
         </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <a class="btn btn-default my-2 my-sm-0" [routerLink]="['/login']" routerLinkActive="router-link-active">Log out</a>
+        </form>
     </div>
 </nav>
