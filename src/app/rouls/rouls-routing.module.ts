@@ -5,8 +5,14 @@ import { RoulsComponent } from './rouls.component';
 
 const routes: Routes = [
   {
-    path:'',
-    component:RoulsComponent
+    path: '',
+    component: RoulsComponent,
+    children: [
+      {
+        path: 'add-role',
+        loadChildren: () => import("../add-role/add-role.module").then(m => m.AddRoleModule)
+      }
+    ]
   }
 ];
 
